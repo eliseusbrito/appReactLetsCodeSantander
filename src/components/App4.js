@@ -15,14 +15,17 @@ class App4 extends React.Component {
   }
 
   render() {
-    if (!this.state.nome) {
+
+    const renderForm = () => {
       return (
         <>
           Nome: <input type text="text" value={this.state.nome} onChange={this.changetxtName}></input>
           <button onClick={this.persistName}>Salvar</button>
         </>
       )
-    } else {
+    }
+
+    const renderTxt = () => {
       return (
         <>
           <p>
@@ -30,7 +33,10 @@ class App4 extends React.Component {
           </p>
         </>
       )
-    }
+    }  
+
+    return !this.state.nome ? renderForm() : renderTxt();
+
   }
 }
 
