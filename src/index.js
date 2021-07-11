@@ -11,6 +11,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Lista >
+      Texto1
       <Item key={999} id={999} completo={false}>
         Teste1
       </Item>
